@@ -1,3 +1,7 @@
+import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
+
 import {StatusBar} from 'expo-status-bar';
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
@@ -11,13 +15,7 @@ import Page6 from './Pages/page6';
 export default function App() {
   return (
     <View style={styles.container}>
-      {/* <StatusBar style="auto" /> */}
-      <Page1></Page1>
-      {/* <Page2></Page2>
-      <Page3></Page3>
-      <Page4></Page4>
-      <Page5></Page5>
-      <Page6></Page6> */}
+      <Page4 />
     </View>
   );
 }
