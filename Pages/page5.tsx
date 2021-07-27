@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, Button} from 'react-native';
 
-const Page5 = () => {
+const Page5 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.wrapper}>
       <View style={[styles.boxStyle, styles.box1]}>
@@ -13,7 +13,7 @@ const Page5 = () => {
       <View style={[styles.boxStyle, styles.box2]}>
         <View style={styles.box2_1}>
           <Button
-            onPress={this._navigate}
+            onPress={() => navigation.navigate('Page6')}
             title="Go to layout 6"
             color="#FFFFFF"
           />

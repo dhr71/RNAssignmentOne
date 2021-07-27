@@ -1,5 +1,4 @@
 import React from 'react';
-import {createStackNavigator, createAppContainer} from 'react-navigation';
 import {
   View,
   Text,
@@ -9,7 +8,7 @@ import {
   Button,
 } from 'react-native';
 
-const Page1 = () => {
+const Page1 = ({navigation}) => {
   return (
     <SafeAreaView style={styles.wrapper}>
       <Image
@@ -22,11 +21,15 @@ const Page1 = () => {
 
       <View style={[styles.boxStyle, styles.box3]}>
         <View style={styles.box3_1}>
-          <Button onPress={this._navigate} title="Click" color="#FFFFFF" />
+          <Button
+            onPress={() => navigation.navigate('Page2')}
+            title="Click"
+            color="#FFFFFF"
+          />
         </View>
         <View style={styles.box3_2}>
           <Button
-            onPress={this._navigate}
+            onPress={() => navigation.navigate('Page2')}
             title="Go to layout 2"
             color="#FFFFFF"
           />
